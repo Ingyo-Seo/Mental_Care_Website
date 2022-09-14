@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+    <script th:src="@{/bootstrap.bundle.min.js}"></script>
+</head>
+
+  <body class="bg-light">
+  
+  <div th:replace="header :: header"></div>
+    
+    <div class="container">
+      <main>
+        <div class="py-5 text-center m-auto">
+          <h2>회원가입</h2>
+        </div>
+    
+        <div class="row justify-content-md-center">
+          <div class="col-md-7">
+            <h4 class="mb-3">회원 정보 입력</h4>
+            <form class="needs-validation" th:action="@{/Signup}" th:object="${userCreateForm}" method="post">
+              <div class="row">
+                <div class="col-sm-12">
+                  <label for="user_id" class="form-label">아이디</label>
+                  <input type="text" class="form-control" th:field="*{userid}">
+                </div>
+    
+                <div class="col-sm-6">
+                  <label for="user_password" class="form-label">비밀번호</label>
+                  <input type="password" class="form-control" th:field="*{userpassword}">
+                </div>
+                
+                <div class="col-sm-6">
+                  <label for="user_password_confirm" class="form-label">비밀번호 확인</label>
+                  <input type="password" class="form-control" th:field="*{userpasswordconfirm}">
+                </div>
+    
+                <div class="col-sm-12">
+                  <label for="user_email" class="form-label">이메일</label>
+                  <input type="email" class="form-control" th:field="*{useremail}">
+                </div>
+                
+                <div class="col-sm-12">
+                  <label for="user_nickname" class="form-label">닉네임</label>
+                  <input type="text" class="form-control" th:field="*{usernickname}">
+                </div>
+	
+              </div>
+    
+              <hr class="my-4">
+    
+              <button class="w-100 btn btn-success btn-lg" type="submit">회원가입</button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+    
+    <div th:replace="footers :: footers"></div>
+
+      </body>
+</html>

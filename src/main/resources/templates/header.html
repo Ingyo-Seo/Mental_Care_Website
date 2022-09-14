@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+    <script th:src="@{/bootstrap.bundle.min.js}"></script>
+</head>
+<body class="bg-light">
+
+<div th:fragment="header">
+
+	<header class="blog-header lh-1 py-3">
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-md text-end px-4">
+          <button type="button" class="btn btn-outline-success me-2" th:onclick="location.href='/Signin'" sec:authorize="isAnonymous()">로그인</button>
+          <button type="button" class="btn btn-outline-success me-2" th:onclick="location.href='/Signout'" sec:authorize="isAuthenticated()">로그아웃</button>
+          <button type="button" class="btn btn-success" th:onclick="location.href='/Signup'" sec:authorize="isAnonymous()">회원가입</button>
+        </div>
+      </div>
+    </header>
+	
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-md px-4">
+        <img src="Character.png" class="img-fluid rounded" width="150" height="300" alt="배너">
+      </div>
+    </div>
+<nav class="navbar navbar-expand-lg bg-success py-3 mb-2 fw-bold justify-content-center">
+  <div class="container-fluid">
+    <a class="navbar-brand">건강해용</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/Homepage}">홈</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            게시판
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" th:href="@{/Board/Notice}">공지사항</a></li>
+            <li><a class="dropdown-item" th:href="@{/Board/Free}">자유게시판</a></li>
+            <li><a class="dropdown-item" th:href="@{/Board/Anonymous}">익명게시판</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/Healthcare}">건강관리</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+</div>
+</body>
+</html>

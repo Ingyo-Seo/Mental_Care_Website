@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+    <script th:src="@{/bootstrap.bundle.min.js}"></script>
+</head>
+<body class="bg-light">
+<div th:replace="header :: header"></div>
+
+<div class="container-fluid card mb-5">
+  <div class="card-header bg-success bg-opacity-50">
+	<h1 th:text="${board.boardtitle}"></h1>
+  </div>
+  <div class="card-body bg-success bg-opacity-25">
+    <h5 class="card-title" th:text="${board.boardcontent}"></h5>
+  </div>
+</div>
+
+<div class="container mb-5">
+<form th:action="@{|/Comment/Create/${board.boardserial}|}" method="post" >
+	<div class="form-floating">
+  		<textarea class="form-control" placeholder="Leave a comment here" name="commentcontent" id="commentcontent"></textarea>
+  		<label for="floatingTextarea2">댓글</label>
+  		<input type="submit" value="댓글작성" class="btn btn-success">
+	</div>
+</form>
+</div>
+
+<div class="card mb-5 container bg-dark text-white">
+<h5 th:text="|${#lists.size(board.commentList)}개의 댓글이 작성됨.|"></h5>
+<br>
+<div>
+    <ul class="list-group">
+        <li th:each="comment : ${board.commentList}" th:text="${comment.commentcontent}" class="list-group-item"></li>
+    </ul>
+</div>
+</div>
+
+<div th:replace="footers :: footers"></div>
+</body>
+</html>

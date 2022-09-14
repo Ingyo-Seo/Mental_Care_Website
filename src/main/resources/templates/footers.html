@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+    <script th:src="@{/bootstrap.bundle.min.js}"></script>
+</head>
+<body class="bg-light">
+      <footer class="py-3 my-4" th:fragment="footers">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a th:href="@{/Homepage}" class="nav-link px-2 text-muted">홈</a></li>
+          <li class="nav-item"><a th:href="@{/Board/Notice}" class="nav-link px-2 text-muted">공지사항</a></li>
+          <li class="nav-item"><a th:href="@{/Board/Free}" class="nav-link px-2 text-muted">자유게시판</a></li>
+          <li class="nav-item"><a th:href="@{/Board/Anonymous}" class="nav-link px-2 text-muted">익명게시판</a></li>
+          <li class="nav-item"><a th:href="@{/Healthcare}" class="nav-link px-2 text-muted">건강관리</a></li>
+        </ul>
+        <p class="text-center text-muted"> 2022 SW 공모전 - 서인교</p>
+      </footer>
+    <script th:src="@{/bootstrap.min.js}"></script>
+</body>
+</html>

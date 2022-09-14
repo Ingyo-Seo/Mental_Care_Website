@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+    <script th:src="@{/bootstrap.bundle.min.js}"></script>
+</head>
+  <body class="bg-white">
+  
+  <div class="w-auto h-auto img-wrapper">
+    <button type="button" class="img-fluid bg-white text-center" style="border:none;" id="img_btn" th:onclick="location.href='/Homepage'">
+    	<img th:src="Character_index.png" class="rounded img-responsive" height="50%" width="50%">
+    </button>
+  </div>
+    
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
+    <script th:src="@{/bootstrap.bundle.min.js}"></script>
+</head>
+<body class="bg-light">
+
+<div th:replace="header :: header"></div>
+
+<div class="container">
+    <h5 class="my-3 border-bottom pb-2">게시글 작성</h5>
+    <form th:action="@{/Board/Create}" method="post">
+        <div class="mb-3">
+            <label for="boardtitle" class="form-label">제목</label>
+            <input type="text" name="boardtitle" id="boardtitle" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="boardcontent" class="form-label">내용</label>
+            <textarea name="boardcontent" id="boardcontent" class="form-control" rows="10"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="boardtitle" class="form-label">게시글 유형</label>
+			<select class="form-select form-select mb-3" aria-label=".form-select" name="boardtype" id="boardtype">
+  				<option selected>작성할 게시판 선택</option>
+  				<option value="공지">공지</option>
+  				<option value="자유">자유</option>
+  				<option value="익명">익명</option>
+			</select>
+        </div>
+        <input type="submit" value="작성완료" class="btn btn-success my-2">
+    </form>
+    
+<div th:replace="footers :: footers"></div>
+</div>
+</body>
+</html>
