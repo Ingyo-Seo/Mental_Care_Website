@@ -10,7 +10,35 @@
 공개SW 개발자대회 참가 및 개인 학습용으로 진행했던 개인 프로젝트입니다. 게시판 기능과 약 먹은 시간 타임라인을 확인할 수 있는 웹사이트입니다.
 
 ## 파일 요약
-
+* /src/main/java/com/health/board 폴더 :
+  * BoardController.java :
+  * BoardCreateContent.java :
+  * BoardEntity.java :
+  * BoardRepository.java :
+  * BoardService.java :
+* /src/main/java/com/health/care 폴더 :
+  * CareController.java :
+  * CareEntity.java :
+  * CareRepository.java :
+  * CareService.java :
+* /src/main/java/com/health/comment 폴더 :
+  * CommentController.java :
+  * CommentCreateContent.java :
+  * CommentEntity.java :
+  * CommentRepository.java :
+  * CommentService.java :
+* /src/main/java/com/health/user 폴더 :
+  * UserController.java :
+  * UserCreateAccount.java :
+  * UserEntity.java :
+  * UserRepository.java :
+  * UserRole.java :
+  * UserSecurityService.java :
+  * UserService.java :
+* DataNotFoundException.java :
+* HealthApplication.java :
+* MainController.java :
+* SecurityConfig.java :
 
 ## 프로젝트 결과 
 
