@@ -1,7 +1,7 @@
 # 정신 건강 증진 웹 사이트
 
 ## 프로젝트 기간
-2022/7/4 ~ 현재
+2022/7/4 ~ 2022/8/3
 
 ## 사용 기술
 <img src="https://img.shields.io/badge/JAVA-007396?style=flat-square&logo=java&logoColor=white"/> <img src="https://img.shields.io/badge/Spring Tool Suite-6DB33F?style=flat-square&logo=Spring&logoColor=white"/> <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat-square&logo=Spring Boot&logoColor=white"/> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/>
