@@ -10,27 +10,27 @@
 공개SW 개발자대회 참가 및 개인 학습용으로 진행했던 개인 프로젝트입니다. 게시판 기능과 약 먹은 시간 타임라인을 확인할 수 있는 웹사이트입니다.
 
 ## 파일 요약
-- /src/main/java/com/health/board 폴더 :
+- /src/main/java/com/health/board 폴더 : 게시글 관련 데이터 코드 폴더
   - BoardController.java :
-  - BoardCreateContent.java :
-  - BoardEntity.java :
+  - BoardCreateContent.java : 
+  - BoardEntity.java : JPA를 통해서 게시글 테이블을 생성하는 코드
   - BoardRepository.java :
   - BoardService.java :
-- /src/main/java/com/health/care 폴더 :
+- /src/main/java/com/health/care 폴더 :  관련 데이터 코드 폴더
   - CareController.java :
-  - CareEntity.java :
+  - CareEntity.java : JPA를 통해서 테이블을 생성하는 코드
   - CareRepository.java :
   - CareService.java :
-- /src/main/java/com/health/comment 폴더 :
+- /src/main/java/com/health/comment 폴더 : 댓글 관련 데이터 코드 폴더
   - CommentController.java :
   - CommentCreateContent.java :
-  - CommentEntity.java :
+  - CommentEntity.java : JPA를 통해서 댓글 테이블을 생성하는 코드
   - CommentRepository.java :
   - CommentService.java :
-- /src/main/java/com/health/user 폴더 :
+- /src/main/java/com/health/user 폴더 : 사용자 관련 데이터 코드 폴더
   - UserController.java :
   - UserCreateAccount.java :
-  - UserEntity.java :
+  - UserEntity.java : JPA를 통해서 사용자 테이블을 생성하는 코드
   - UserRepository.java :
   - UserRole.java :
   - UserSecurityService.java :
