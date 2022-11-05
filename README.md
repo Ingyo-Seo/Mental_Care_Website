@@ -11,34 +11,45 @@
 
 ## 파일 요약
 - /src/main/java/com/health/board 폴더 : 게시글 관련 데이터 코드 폴더
-  - BoardController.java :
-  - BoardCreateContent.java : 
-  - BoardEntity.java : JPA를 통해서 게시글 테이블을 생성하는 코드
-  - BoardRepository.java :
-  - BoardService.java :
-- /src/main/java/com/health/care 폴더 :  관련 데이터 코드 폴더
-  - CareController.java :
-  - CareEntity.java : JPA를 통해서 테이블을 생성하는 코드
-  - CareRepository.java :
-  - CareService.java :
+  - BoardController.java : Controller
+  - BoardCreateContent.java : DTO
+  - BoardEntity.java : Entity
+  - BoardRepository.java : DAO
+  - BoardService.java : Service
+- /src/main/java/com/health/care 폴더 : 약복용 관련 데이터 코드 폴더
+  - CareController.java : Controller
+  - CareEntity.java : Entity
+  - CareRepository.java : DAO
+  - CareService.java : Service
 - /src/main/java/com/health/comment 폴더 : 댓글 관련 데이터 코드 폴더
-  - CommentController.java :
-  - CommentCreateContent.java :
-  - CommentEntity.java : JPA를 통해서 댓글 테이블을 생성하는 코드
-  - CommentRepository.java :
-  - CommentService.java :
+  - CommentController.java : Controller
+  - CommentCreateContent.java : DTO
+  - CommentEntity.java : Entity
+  - CommentRepository.java : DAO
+  - CommentService.java : Service
 - /src/main/java/com/health/user 폴더 : 사용자 관련 데이터 코드 폴더
-  - UserController.java :
-  - UserCreateAccount.java :
-  - UserEntity.java : JPA를 통해서 사용자 테이블을 생성하는 코드
-  - UserRepository.java :
-  - UserRole.java :
-  - UserSecurityService.java :
-  - UserService.java :
-- DataNotFoundException.java :
-- HealthApplication.java :
-- MainController.java :
-- SecurityConfig.java :
+  - UserController.java : Controller
+  - UserCreateAccount.java : DTO
+  - UserEntity.java : Entity
+  - UserRepository.java : DAO
+  - UserRole.java : 사용자 권한을 정의하는 코드
+  - UserSecurityService.java : 로그인 처리를 할 때의 코드
+  - UserService.java : Service
+- DataNotFoundException.java : 예외 처리 코드
+- HealthApplication.java : 프로젝트 생성시 기본 생성되는 코드
+- MainController.java : 메인 Controller
+- SecurityConfig.java : 스프링 기반 애플리케이션의 인증과 권한을 담당하는 스프링의 하위 프레임워크 코드
+
+MVC - Model View Controller 패턴
+
+Client <-[DTO]-> Controller <-[DTO]-> Service <-[DTO]-> Repository(DAO) <-[Entity(Domain)]-> DB
+
+Client : 사용자
+DTO : Data Transfer Object, 데이터를 이동하기 위한 객체, Entity를 그대로 사용하면 데이터 변질 위험, 역할 분리
+Controller : 요청과 응답을 관리하는 계층
+Service : 모듈화와 보안을 위해서 Controller가 바로 DAO를 사용해서 DB에 접근하지 않기 위해서 사용
+DAO : Data Access Object, 실제 DB에 접근하는 객체
+Entity : 테이블과 1대1 매핑되는 객체
 
 ## 프로젝트 결과 
 
