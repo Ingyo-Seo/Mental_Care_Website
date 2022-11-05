@@ -44,12 +44,12 @@ MVC - Model View Controller 패턴
 
 Client <-[DTO]-> Controller <-[DTO]-> Service <-[DTO]-> Repository(DAO) <-[Entity(Domain)]-> DB
 
-Client : 사용자
-DTO : Data Transfer Object, 데이터를 이동하기 위한 객체, Entity를 그대로 사용하면 데이터 변질 위험, 역할 분리
-Controller : 요청과 응답을 관리하는 계층
-Service : 모듈화와 보안을 위해서 Controller가 바로 DAO를 사용해서 DB에 접근하지 않기 위해서 사용
-DAO : Data Access Object, 실제 DB에 접근하는 객체
-Entity : 테이블과 1대1 매핑되는 객체
+- Client : 사용자
+- DTO : Data Transfer Object, 데이터를 이동하기 위한 객체, Entity를 그대로 사용하면 데이터 변질 위험, 역할 분리
+- Controller : 요청과 응답을 관리하는 계층
+- Service : 모듈화와 보안을 위해서 Controller가 바로 DAO를 사용해서 DB에 접근하지 않기 위해서 사용
+- DAO : Data Access Object, 실제 DB에 접근하는 객체
+- Entity : 테이블과 1대1 매핑되는 객체
 
 ## 프로젝트 결과 
 
